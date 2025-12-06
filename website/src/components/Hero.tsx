@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Heart, Shield, Zap, Brain, CheckCircle, Star, FileText } from 'lucide-react';
+import { ExternalLink, Github, Heart, Shield, Zap, Brain, CheckCircle, Star, FileText, BarChart } from 'lucide-react';
 import Prism from './ui/prism';
 import { useBotUptime } from '../hooks/useBotUptime';
 import { Link } from 'react-router-dom';
@@ -47,7 +47,7 @@ const Hero = () => {
                   {loading ? '...' : uptime?.bot.status === 'running' ? 'Online' : 'Offline'}
                 </span>
               </div>
-              
+
               {/* Login Button */}
               {/* <a
                 href="/auth/callback"
@@ -56,7 +56,7 @@ const Hero = () => {
                 <LogIn className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span className="hidden sm:inline">Login</span>
               </a> */}
-              
+
               {/* Privacy Policy Link */}
               <Link
                 to="/privacy"
@@ -65,7 +65,7 @@ const Hero = () => {
               >
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
-              
+
               <a href="https://github.com/iotserver24" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
@@ -112,16 +112,16 @@ const Hero = () => {
                 <span className="text-red-300 text-xs sm:text-sm">Status unavailable</span>
               </div>
             )}
-            
+
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Automate Your{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Code Reviews
               </span>
             </h1>
-            
+
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl sm:max-w-3xl mx-auto px-4">
-              Get instant, intelligent feedback on your pull requests. 
+              Get instant, intelligent feedback on your pull requests.
               Our multi-agent AI system uses specialized models for comprehensive code analysis and professional review generation.
               <br />
               <span className="text-purple-400 font-medium">📊 Real-time analytics dashboard available!</span>
@@ -154,6 +154,13 @@ const Hero = () => {
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Docs</span>
               </Link>
+              <Link
+                to="/analytics"
+                className="inline-flex items-center justify-center space-x-2 sm:space-x-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base md:text-lg font-semibold px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <BarChart className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Analytics</span>
+              </Link>
             </div>
           </div>
 
@@ -166,7 +173,7 @@ const Hero = () => {
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">AI-Powered Analysis</h3>
               <p className="text-sm sm:text-base text-gray-400">Advanced GPT models analyze your code for quality, security, and best practices.</p>
             </div>
-            
+
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-4 sm:p-6 text-center">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
@@ -174,7 +181,7 @@ const Hero = () => {
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Security First</h3>
               <p className="text-sm sm:text-base text-gray-400">Identifies potential security vulnerabilities and suggests secure coding practices.</p>
             </div>
-            
+
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-4 sm:p-6 text-center sm:col-span-2 lg:col-span-1">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
@@ -195,7 +202,7 @@ const Hero = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Install App</h3>
                 <p className="text-sm sm:text-base text-gray-400">Add the GitHub App to your repository with one click.</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <span className="text-lg sm:text-xl md:text-2xl font-bold text-white">2</span>
@@ -207,7 +214,7 @@ const Hero = () => {
                   <code className="bg-gray-700 px-2 py-1 rounded text-xs sm:text-sm">@xibe-review</code>
                 </div>
               </div>
-              
+
               <div className="text-center sm:col-span-2 lg:col-span-1">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <span className="text-lg sm:text-xl md:text-2xl font-bold text-white">3</span>
@@ -262,7 +269,7 @@ const Hero = () => {
               <span className="text-gray-400 text-sm hidden sm:inline">•</span>
               <a href="https://anishkumar.tech" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 text-sm">Portfolio</a>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-6">
               <span className="text-gray-400 text-sm">Powered by</span>
               <a href="https://xibe.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-medium text-sm">XIBE AI</a>
@@ -278,9 +285,11 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="text-center text-gray-500 text-xs sm:text-sm mt-4">
-            <p>Code will be open source soon • Completely free to use</p>
+            <p>
+              This project is <a href="https://github.com/iotserver24/xibe-pr" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Open Source</a> • Completely free to use
+            </p>
           </div>
         </div>
       </footer>
