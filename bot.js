@@ -36,7 +36,7 @@ const ANALYSIS_MODEL = process.env.ANALYSIS_MODEL || 'your_analysis_model'; // M
 const COMMENT_MODEL = process.env.COMMENT_MODEL || 'your_comment_model'; // Model for Stage 2: Comment Generation
 const BOT_USERNAME = process.env.BOT_USERNAME || 'Xibe-review';
 const AUTO_REVIEW_ENABLED = process.env.AUTO_REVIEW_ENABLED === 'true';
-const FRONTEND_URL = process.env.FRONTEND_URL || 'https://review.xibe.app';
+const FRONTEND_URL = process.env.FRONTEND_URL || 'https://pr.xibe.app';
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/xibe-pr1';
 
 // MongoDB Connection
