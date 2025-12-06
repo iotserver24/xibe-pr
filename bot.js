@@ -2363,6 +2363,11 @@ app.get('/api/analytics/users/list', requireAdmin, async (req, res) => {
   }
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 // Public analytics endpoint - user-facing data only
 app.get('/analytics', async (req, res) => {
   try {
